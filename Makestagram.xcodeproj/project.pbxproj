@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F4F2A911D21E58500642B60 /* PhotoTakingHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4F2A901D21E58500642B60 /* PhotoTakingHelper.swift */; };
 		0F63F8B31D21D91800414192 /* FilterViewController in Resources */ = {isa = PBXBuildFile; fileRef = 0F63F8B21D21D91800414192 /* FilterViewController */; };
 		0F63F8B51D21D93100414192 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F63F8B41D21D93100414192 /* PhotoViewController.swift */; };
 		0F63F8B71D21DB4A00414192 /* FriendSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F63F8B61D21DB4A00414192 /* FriendSearchViewController.swift */; };
@@ -55,6 +56,7 @@
 
 /* Begin PBXFileReference section */
 		007C19DAD863C7AFB10D8227 /* Pods_MakestagramTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MakestagramTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0F4F2A901D21E58500642B60 /* PhotoTakingHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoTakingHelper.swift; sourceTree = "<group>"; };
 		0F63F8B21D21D91800414192 /* FilterViewController */ = {isa = PBXFileReference; lastKnownFileType = folder; path = FilterViewController; sourceTree = "<group>"; };
 		0F63F8B41D21D93100414192 /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 		0F63F8B61D21DB4A00414192 /* FriendSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendSearchViewController.swift; sourceTree = "<group>"; };
@@ -114,6 +116,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F4F2A8F1D21E53D00642B60 /* PhotoTaking */ = {
+			isa = PBXGroup;
+			children = (
+				0F4F2A901D21E58500642B60 /* PhotoTakingHelper.swift */,
+			);
+			path = PhotoTaking;
+			sourceTree = "<group>";
+		};
 		3891F3EF3E0D505068493F86 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -185,6 +195,7 @@
 		62C8C1E21B06BD6500DC3EA7 /* Makestagram */ = {
 			isa = PBXGroup;
 			children = (
+				0F4F2A8F1D21E53D00642B60 /* PhotoTaking */,
 				6277189C1B0A58E800AF5C6E /* Helpers */,
 				627718811B0A581600AF5C6E /* ViewControllers */,
 				62C8C1E51B06BD6500DC3EA7 /* AppDelegate.swift */,
@@ -430,6 +441,7 @@
 				6277189F1B0A58E800AF5C6E /* ErrorHandling.swift in Sources */,
 				0FCB81121D21D74100F73B2A /* TimelineViewController.swift in Sources */,
 				62C8C1E61B06BD6500DC3EA7 /* AppDelegate.swift in Sources */,
+				0F4F2A911D21E58500642B60 /* PhotoTakingHelper.swift in Sources */,
 				0F63F8B71D21DB4A00414192 /* FriendSearchViewController.swift in Sources */,
 				0F63F8B51D21D93100414192 /* PhotoViewController.swift in Sources */,
 			);
