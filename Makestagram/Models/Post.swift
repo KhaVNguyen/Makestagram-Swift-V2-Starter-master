@@ -8,6 +8,7 @@
 
 import UIKit
 import Parse
+import Bond
 
 class Post: PFObject, PFSubclassing {
     
@@ -15,7 +16,7 @@ class Post: PFObject, PFSubclassing {
     @NSManaged var imageFile: PFFile?
     @NSManaged var user: PFUser?
     
-    var image: UIImage?
+    var image: Observable<UIImage?> = Observable(nil)
     
     var photoUploadTask: UIBackgroundTaskIdentifier?
     
@@ -36,7 +37,7 @@ class Post: PFObject, PFSubclassing {
     }
     
     func uploadPost() {
-        if let providedImage = image {
+        if let providedImage = image.value {
             guard let photoFile = PFFile(name: "image.jpg", data: UIImageJPEGRepresentation(providedImage, 1.0)!) else {return}
             // guard : code between curly braces runs if photoFile is nil
             self.imageFile = photoFile
@@ -54,6 +55,18 @@ class Post: PFObject, PFSubclassing {
         }
         else {
             print("No image given")
+        }
+    }
+    
+    func downloadImage() {
+        if (image.value == nil) {
+            imageFile?.getDataInBackgroundWithBlock {
+                (data: NSData?, error: NSError?) -> Void in
+                if let data = data {
+                    let image = UIImage(data: data!, scale: 1.0)
+                    self.image.value = image
+                }
+            }
         }
     }
 }

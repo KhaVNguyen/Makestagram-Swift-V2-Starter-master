@@ -7,8 +7,18 @@
 //
 
 import UIKit
+import Bond
 
 class PostTableViewCell: UITableViewCell {
+    
+    var post: Post? {
+        didSet {
+            if let post =  post {
+                post.image.bindTo(postImageView.bnd_image) // post image needs to be an observable in order to use bindings 
+            }
+        }
+        
+    }
 
     @IBOutlet weak var postImageView: UIImageView!
     
