@@ -20,6 +20,8 @@ class Post: PFObject, PFSubclassing {
     
     var photoUploadTask: UIBackgroundTaskIdentifier?
     
+    var likes: Observable<[PFUser]?> = Observable(nil)
+    
     static func parseClassName() -> String {
         return "Post"
     }
@@ -63,10 +65,49 @@ class Post: PFObject, PFSubclassing {
             imageFile?.getDataInBackgroundWithBlock {
                 (data: NSData?, error: NSError?) -> Void in
                 if let data = data {
-                    let image = UIImage(data: data!, scale: 1.0)
+                    let image = UIImage(data: data, scale: 1.0)
                     self.image.value = image
                 }
             }
         }
     }
+    
+    func fetchLikes() {
+        if(likes.value != nil) {
+            return
+        }
+        
+        ParseHelper.likesForPost(self) { (likes: [PFObject]?, error: NSError?) -> Void in
+            let validLikes = likes?.filter {
+                like in like[ParseHelper.ParseLikeFromUser] != nil
+            }
+            
+            // like filterng but instead replacing
+            self.likes.value = validLikes?.map { like in
+                let fromUser = like[ParseHelper.ParseLikeFromUser] as! PFUser
+                return fromUser
+            }
+        }
+    }
+    
+    func doesUserLikePost(user:PFUser) -> Bool{
+        if let likes = likes.value {
+            return likes.contains(user)
+        }
+        else {
+            return false
+        }
+    }
+    
+    func toggleLikePost(user: PFUser) {
+        if doesUserLikePost(user) {
+            likes.value = likes.value?.filter { $0 != user }
+            ParseHelper.unlikePost(user, post:self)
+        }
+        else {
+            likes.value?.append(user)
+            ParseHelper.likePost(user, post: self)
+        }
+    }
+    
 }

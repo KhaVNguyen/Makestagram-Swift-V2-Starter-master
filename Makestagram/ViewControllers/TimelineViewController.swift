@@ -36,7 +36,7 @@ extension TimelineViewController: UITabBarControllerDelegate {
         // instantiate PhotoTakingHelper class and provide callback when a photo is selected
         photoTakingHelper = PhotoTakingHelper(viewController: self.tabBarController!) { (image: UIImage?) in
             let post = Post()
-            post.image.value = image
+            post.image.value = image!
             post.uploadPost()
         }
     }
@@ -51,6 +51,9 @@ extension TimelineViewController: UITableViewDataSource  {
         let cell = tableView.dequeueReusableCellWithIdentifier("PostCell") as! PostTableViewCell
         
         let post = posts[indexPath.row]
+        post.downloadImage()
+        post.fetchLikes()
+        
         cell.post = post
         return cell
     }
@@ -63,7 +66,6 @@ extension TimelineViewController: UITableViewDataSource  {
             (result: [PFObject]?, error: NSError?) -> Void in
             self.posts = result as? [Post] ?? []
             self.tableView.reloadData()
-            
         }
         
     }
