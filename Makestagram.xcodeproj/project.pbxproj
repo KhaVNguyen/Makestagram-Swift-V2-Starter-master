@@ -10,6 +10,7 @@
 		0F4F2A911D21E58500642B60 /* PhotoTakingHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4F2A901D21E58500642B60 /* PhotoTakingHelper.swift */; };
 		0F589EE91D230E180041592C /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F589EE81D230E180041592C /* Post.swift */; };
 		0F589EEE1D23425B0041592C /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F589EED1D23425B0041592C /* PostTableViewCell.swift */; };
+		0F589F0E1D242E230041592C /* ParseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F589F0D1D242E220041592C /* ParseHelper.swift */; };
 		0F63F8B31D21D91800414192 /* FilterViewController in Resources */ = {isa = PBXBuildFile; fileRef = 0F63F8B21D21D91800414192 /* FilterViewController */; };
 		0F63F8B51D21D93100414192 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F63F8B41D21D93100414192 /* PhotoViewController.swift */; };
 		0F63F8B71D21DB4A00414192 /* FriendSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F63F8B61D21DB4A00414192 /* FriendSearchViewController.swift */; };
@@ -61,6 +62,7 @@
 		0F4F2A901D21E58500642B60 /* PhotoTakingHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoTakingHelper.swift; sourceTree = "<group>"; };
 		0F589EE81D230E180041592C /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		0F589EED1D23425B0041592C /* PostTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
+		0F589F0D1D242E220041592C /* ParseHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseHelper.swift; sourceTree = "<group>"; };
 		0F63F8B21D21D91800414192 /* FilterViewController */ = {isa = PBXFileReference; lastKnownFileType = folder; path = FilterViewController; sourceTree = "<group>"; };
 		0F63F8B41D21D93100414192 /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 		0F63F8B61D21DB4A00414192 /* FriendSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendSearchViewController.swift; sourceTree = "<group>"; };
@@ -196,6 +198,7 @@
 			children = (
 				6277189D1B0A58E800AF5C6E /* ErrorHandling.swift */,
 				6277189E1B0A58E800AF5C6E /* ParseLoginHelper.swift */,
+				0F589F0D1D242E220041592C /* ParseHelper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -476,6 +479,7 @@
 				0F63F8B71D21DB4A00414192 /* FriendSearchViewController.swift in Sources */,
 				0F63F8B51D21D93100414192 /* PhotoViewController.swift in Sources */,
 				0F589EEE1D23425B0041592C /* PostTableViewCell.swift in Sources */,
+				0F589F0E1D242E230041592C /* ParseHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
