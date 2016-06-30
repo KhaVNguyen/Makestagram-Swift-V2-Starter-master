@@ -22,17 +22,44 @@ class PostTableViewCell: UITableViewCell {
     @IBAction func likeButtonTapped(sender: AnyObject) {
         post?.toggleLikePost(PFUser.currentUser()!)
     }
-    
+	
+	var postDisposable: DisposableType?
+	var likeDisposable: DisposableType?
     
     var post: Post? {
+		
         didSet {
-            if let post =  post {
-                post.image.bindTo(postImageView.bnd_image) // post image needs to be an observable in order to use bindings 
-            }
-        }
-        
-    }
-    
+			
+			postDisposable?.dispose()
+			likeDisposable?.dispose()
+			
+			if let post =  post {
+				postDisposable = post.image.bindTo(postImageView.bnd_image)
+				likeDisposable = post.likes.observe { (value: [PFUser]?) -> () in // code in closure executed everytime post.likes changes
+					
+					if let value = value {
+						self.likesLabel.text = self.stringFromUserList(value)
+						self.likeButton.selected = value.contains(PFUser.currentUser()!)
+						self.likesIconImageView.hidden = (value.count == 0)
+					}
+						
+					else {
+						self.likesLabel.text = ""
+						self.likeButton.selected = false
+						self.likesIconImageView.hidden = true
+					}
+				}
+			}
+			
+		}
+	}
+	
+	func stringFromUserList(userList: [PFUser]) -> String {
+		let usernameList = userList.map { user in user.username! }
+		let commaSeparatedList = usernameList.joinWithSeparator(",")
+		return commaSeparatedList
+	}
+	
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
