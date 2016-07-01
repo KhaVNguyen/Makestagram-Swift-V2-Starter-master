@@ -9,6 +9,7 @@
 import Foundation
 import Parse
 
+
 class ParseHelper {
     
     static let ParseFollowClass = "Follow"
@@ -30,7 +31,7 @@ class ParseHelper {
     static let ParseUserUsername = "username"
     
     
-    static func timelineRequestForCurrentUser(completionBlock: PFQueryArrayResultBlock) {
+	static func timelineRequestForCurrentUser(range: Range<Int>, completionBlock: PFQueryArrayResultBlock) {
         
         // query of users that the current user has followed
         let followingQuery = PFQuery(className: ParseFollowClass)
@@ -48,6 +49,10 @@ class ParseHelper {
         query.orderByDescending(ParsePostCreatedAt)
         
         query.findObjectsInBackgroundWithBlock(completionBlock)
+		
+		query.skip = range.startIndex
+		query.limit = range.endIndex - range.startIndex
+		query.findObjectsInBackgroundWithBlock(completionBlock)
     }
     
     // MARK: Likes

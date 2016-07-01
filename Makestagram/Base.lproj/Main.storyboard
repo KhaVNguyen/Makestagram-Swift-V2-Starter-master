@@ -128,6 +128,7 @@
                                 </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="KRI-v2-NQg" id="RFC-mB-lmD"/>
+                                    <outlet property="delegate" destination="KRI-v2-NQg" id="l7v-JZ-wQp"/>
                                 </connections>
                             </tableView>
                         </subviews>
