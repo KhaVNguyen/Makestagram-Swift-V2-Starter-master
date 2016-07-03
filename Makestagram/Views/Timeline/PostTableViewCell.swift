@@ -49,7 +49,7 @@ class PostTableViewCell: UITableViewCell {
 						self.likesIconImageView.hidden = true
 					}
 				}
-			eve
+			}
 		}
 	}
 	
