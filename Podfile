@@ -11,6 +11,7 @@ target 'Makestagram' do
   pod 'Parse'
   pod 'ParseFacebookUtilsV4'
   pod 'ParseUI'
+  pod 'DateTools'
 
   target 'MakestagramTests' do
     inherit! :search_paths

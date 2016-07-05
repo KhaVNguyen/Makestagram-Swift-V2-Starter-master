@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import DateTools
 
 class PostSectionHeaderView: UITableViewCell {
 	
@@ -17,6 +18,7 @@ class PostSectionHeaderView: UITableViewCell {
 		didSet {
 			if let post = post {
 				usernameLabel.text = post.user?.username
+				postTimeLabel.text = post.createdAt?.shortTimeAgoSinceDate(NSDate()) ?? ""
 			}
 		}
 	}

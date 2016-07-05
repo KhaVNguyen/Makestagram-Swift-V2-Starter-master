@@ -23,6 +23,8 @@ class Post: PFObject, PFSubclassing {
     var photoUploadTask: UIBackgroundTaskIdentifier?
     
     var likes: Observable<[PFUser]?> = Observable(nil)
+	
+	static var imageCache: NSCacheSwift<String, UIImage>!
     
     static func parseClassName() -> String {
         return "Post"
@@ -37,6 +39,7 @@ class Post: PFObject, PFSubclassing {
         dispatch_once(&onceToken) {
             // inform parse about this subclass
             self.registerSubclass()
+			Post.imageCache = NSCacheSwift<String, UIImage>()
         }
     }
     
@@ -66,6 +69,7 @@ class Post: PFObject, PFSubclassing {
     }
     
     func downloadImage() {
+		image.value = Post.imageCache[self.imageFile!.name]
         if (image.value == nil) {
             imageFile?.getDataInBackgroundWithBlock {
                 (data: NSData?, error: NSError?) -> Void in
