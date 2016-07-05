@@ -16,6 +16,7 @@
 		0F63F8B51D21D93100414192 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F63F8B41D21D93100414192 /* PhotoViewController.swift */; };
 		0F63F8B71D21DB4A00414192 /* FriendSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F63F8B61D21DB4A00414192 /* FriendSearchViewController.swift */; };
 		0FCB81121D21D74100F73B2A /* TimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCB81111D21D74100F73B2A /* TimelineViewController.swift */; };
+		0FEBF3791D2C2A79009F4350 /* PostSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FEBF3781D2C2A79009F4350 /* PostSectionHeaderView.swift */; };
 		0FF396491D2714AD0003684D /* FriendSearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF396481D2714AD0003684D /* FriendSearchTableViewCell.swift */; };
 		62551B961B06C2F5000913E4 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62551B951B06C2F5000913E4 /* Social.framework */; };
 		62551B981B06C2FD000913E4 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62551B971B06C2FD000913E4 /* Accounts.framework */; };
@@ -69,6 +70,7 @@
 		0F63F8B41D21D93100414192 /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 		0F63F8B61D21DB4A00414192 /* FriendSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendSearchViewController.swift; sourceTree = "<group>"; };
 		0FCB81111D21D74100F73B2A /* TimelineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineViewController.swift; sourceTree = "<group>"; };
+		0FEBF3781D2C2A79009F4350 /* PostSectionHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostSectionHeaderView.swift; sourceTree = "<group>"; };
 		0FF396481D2714AD0003684D /* FriendSearchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendSearchTableViewCell.swift; sourceTree = "<group>"; };
 		226626A2261C71AA511BB45E /* Pods-MakestagramTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MakestagramTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MakestagramTests/Pods-MakestagramTests.debug.xcconfig"; sourceTree = "<group>"; };
 		2524C6450A0AE6A1F571B971 /* Pods-Makestagram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Makestagram.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Makestagram/Pods-Makestagram.debug.xcconfig"; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 			isa = PBXGroup;
 			children = (
 				0F589EED1D23425B0041592C /* PostTableViewCell.swift */,
+				0FEBF3781D2C2A79009F4350 /* PostSectionHeaderView.swift */,
 			);
 			path = Timeline;
 			sourceTree = "<group>";
@@ -486,6 +489,7 @@
 				0FCB81121D21D74100F73B2A /* TimelineViewController.swift in Sources */,
 				0F589EE91D230E180041592C /* Post.swift in Sources */,
 				62C8C1E61B06BD6500DC3EA7 /* AppDelegate.swift in Sources */,
+				0FEBF3791D2C2A79009F4350 /* PostSectionHeaderView.swift in Sources */,
 				0F4F2A911D21E58500642B60 /* PhotoTakingHelper.swift in Sources */,
 				0F63F8B71D21DB4A00414192 /* FriendSearchViewController.swift in Sources */,
 				0F63F8B51D21D93100414192 /* PhotoViewController.swift in Sources */,

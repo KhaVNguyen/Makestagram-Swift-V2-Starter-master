@@ -73,9 +73,12 @@ class ParseHelper {
         
         // find like rows with the matching parameters provided by the query
         unlikedPostQuery.findObjectsInBackgroundWithBlock { (results: [PFObject]?, error: NSError?) -> Void in
+			if let error = error {
+				ErrorHandling.defaultErrorHandler(error)
+			}
             if let results = results {
                 for like in results {
-                    like.deleteInBackgroundWithBlock(nil)
+                    like.deleteInBackgroundWithBlock(ErrorHandling.errorHandlingCallback)
                 }
             }
         }
@@ -130,11 +133,14 @@ class ParseHelper {
 		query.whereKey(ParseFollowToUser, equalTo: toUser)
 		
 		query.findObjectsInBackgroundWithBlock { (results: [PFObject]?, error: NSError?) -> Void in
+			if let error = error {
+				ErrorHandling.defaultErrorHandler(error)
+			}
 			
 			let results = results ?? []
 			
 			for follow in results {
-				follow.deleteInBackgroundWithBlock(nil)
+				follow.deleteInBackgroundWithBlock(ErrorHandling.errorHandlingCallback)
 			}
 		}
 	}
