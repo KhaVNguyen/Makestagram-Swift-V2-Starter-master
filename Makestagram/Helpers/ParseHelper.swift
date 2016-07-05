@@ -47,9 +47,7 @@ class ParseHelper {
         let query = PFQuery.orQueryWithSubqueries([postsFromFollowedUsers!, postsFromThisUser!])
         query.includeKey(ParsePostUser)
         query.orderByDescending(ParsePostCreatedAt)
-        
-        query.findObjectsInBackgroundWithBlock(completionBlock)
-		
+        		
 		query.skip = range.startIndex
 		query.limit = range.endIndex - range.startIndex
 		query.findObjectsInBackgroundWithBlock(completionBlock)
@@ -191,10 +189,6 @@ class ParseHelper {
 		
 		return query
 	}
-	
-	
-	
-	
 }
 
 extension PFObject {

@@ -3,9 +3,9 @@ import Parse
 
 class FriendSearchViewController: UIViewController {
 	
+	@IBOutlet weak var searchBar: UISearchBar!
 	@IBOutlet weak var tableView: UITableView!
 	
-	@IBOutlet weak var searchBar: UISearchBar!
 	// stores all the users that match the current search query
 	var users: [PFUser]?
 	

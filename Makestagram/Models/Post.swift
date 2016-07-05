@@ -9,6 +9,8 @@
 import UIKit
 import Parse
 import Bond
+import ConvenienceKit
+import Foundation
 
 class Post: PFObject, PFSubclassing {
     

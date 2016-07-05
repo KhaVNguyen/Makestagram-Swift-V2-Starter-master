@@ -180,7 +180,7 @@
                                     <outlet property="delegate" destination="8Ff-yE-r0D" id="wxv-Mh-P6v"/>
                                 </connections>
                             </searchBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="55" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RPo-Y9-ZZx">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="55" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RPo-Y9-ZZx">
                                 <rect key="frame" x="0.0" y="64" width="600" height="487"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -210,7 +210,7 @@
                                                     <state key="normal" image="add"/>
                                                     <state key="selected" image="check"/>
                                                     <connections>
-                                                        <action selector="followButtonTapped:" destination="7ca-Va-TUZ" eventType="touchUpInside" id="0tO-Tk-fOI"/>
+                                                        <action selector="followButtonTapped:" destination="7ca-Va-TUZ" eventType="touchUpInside" id="dJK-Bq-I1D"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -231,8 +231,8 @@
                                             </variation>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="followButton" destination="Unn-wC-DeE" id="5LD-lS-nkx"/>
-                                            <outlet property="usernameLabel" destination="Mcp-ot-zeU" id="TuS-yk-ixw"/>
+                                            <outlet property="followButton" destination="Unn-wC-DeE" id="pdS-MS-wmA"/>
+                                            <outlet property="usernameLabel" destination="Mcp-ot-zeU" id="1MO-xC-qWo"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -265,8 +265,8 @@
                         <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
                     </tabBarItem>
                     <connections>
-                        <outlet property="searchBar" destination="4w6-j2-x3g" id="JXV-GU-LVC"/>
-                        <outlet property="tableView" destination="RPo-Y9-ZZx" id="vEu-HA-Acg"/>
+                        <outlet property="searchBar" destination="4w6-j2-x3g" id="SFz-fp-37v"/>
+                        <outlet property="tableView" destination="RPo-Y9-ZZx" id="wp2-Uk-XjE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vwB-4I-Ihu" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -276,7 +276,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="thb-wN-pbL">
             <objects>
-                <tabBarController id="Pig-ew-Zsn" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabBarController" id="Pig-ew-Zsn" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" id="Qkb-jB-Kdi">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>

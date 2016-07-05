@@ -56,7 +56,7 @@ extension TimelineViewController: UITabBarControllerDelegate {
 
 extension TimelineViewController: UITableViewDataSource  {
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return timelineComponent.content.count
+        return self.timelineComponent.content.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -69,13 +69,6 @@ extension TimelineViewController: UITableViewDataSource  {
         cell.post = post
         return cell
     }
-    
-    override func viewDidAppear(animated: Bool) {
-        super.viewDidAppear(animated)
-		
-		timelineComponent.loadInitialIfRequired()
-    }
-    
 }
 
 extension TimelineViewController: UITableViewDelegate {
